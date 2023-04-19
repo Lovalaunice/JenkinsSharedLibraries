@@ -8,7 +8,7 @@ pipeline{
     stage('git pull'){
       steps{
         sh "echo start of prod-shared project"
-        git "https://github.com/lovalaunice/maven-web-application"
+      git 'https://Lovalaunice/JenkinsSharedLibraries/edit/master/vars/common.groovy'
         }
       }
     }
