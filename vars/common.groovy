@@ -1,15 +1,15 @@
-def call(String stageName){
-  
-  if ("${stageName}" == "Build")
-     {
-       sh "mvn clean package"
-     }
-  else if ("${stageName}" == "SonarQube Report")
-     {
-       sh "mvn clean sonar:sonar"
-     }
-  else if ("${stageName}" == "Upload Into Nexus")
-     {
-       sh "mvn clean deploy"
-     }
+@Library('LandmarkSS-sharedlibs') _
+pipeline{
+  agent any 
+  tools {
+    maven 'maven3.9.1'
+  }
+  stages{
+    stage('git pull'){
+      steps{
+        sh "echo start of project"
+        git "https://github.com/lovalaunice/maven-web-application"
+        }
+      }
+    }
 }
