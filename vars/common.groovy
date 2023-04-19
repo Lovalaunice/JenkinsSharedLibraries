@@ -1,4 +1,4 @@
-@Library('LandmarkSS-sharedlibs') _
+@Library('JenkinsSharedLibraries') _
 pipeline{
   agent any 
   tools {
@@ -7,7 +7,7 @@ pipeline{
   stages{
     stage('git pull'){
       steps{
-        sh "echo start of project"
+        sh "echo start of prod-shared project"
         git "https://github.com/lovalaunice/maven-web-application"
         }
       }
