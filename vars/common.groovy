@@ -23,3 +23,7 @@ pipeline{
           //common("SonarQube Report")
     }
     }
+    stage("upload Artifacts Into Nexus"){
+      steps{
+        sh "echo artifacts uploaded"
+        // common("upload into Nexus")
