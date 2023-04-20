@@ -13,12 +13,6 @@ pipeline{
       }
     stage("Build"){
     steps{
-      sh "echo code quality report ok"
-       // common("Build")
-  }
+      common("Build")
     }
- stage("Execute SonarQube Report"){
-       steps{
-           common("SonarQube Report")
     }
-  }
