@@ -27,3 +27,7 @@ pipeline{
       steps{
         sh "echo artifacts uploaded"
         // common("upload into Nexus")
+      }
+    }
+  }// Stages close
+  }// Pipeline Close
