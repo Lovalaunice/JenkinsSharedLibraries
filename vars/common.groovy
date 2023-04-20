@@ -11,4 +11,13 @@ pipeline{
       git 'https://github.com/Lovalaunice/maven-web-application'
         }
       }
+    stage("Build"){
+    steps{
+        common("Build")
+  }
     }
+ stage("Execute SonarQube Report"){
+       steps{
+           common("SonarQube Report")
+    }
+  }
